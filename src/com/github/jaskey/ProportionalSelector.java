@@ -45,7 +45,8 @@ public class ProportionalSelector<T extends ICandidate> {
      * @return
      */
     public T selectOne() {
-        Set<T> candidateSetCurrent = new HashSet<>(candidateSet);//取当前的快照，避免并发被动态修改
+        //取当前的快照，避免并发被动态修改
+        Set<T> candidateSetCurrent = new HashSet<>(candidateSet);
         return selectStrategy.selectOne(candidateSetCurrent);
     }
 
@@ -56,7 +57,8 @@ public class ProportionalSelector<T extends ICandidate> {
      * @return
      */
     public List<T> select(int selectCnt) {
-        Set<T> candidateSetCurrent = new HashSet<>(candidateSet);//取当前的快照，避免并发被动态修改
+        //取当前的快照，避免并发被动态修改
+        Set<T> candidateSetCurrent = new HashSet<>(candidateSet);
         int sizeCurrent = candidateSetCurrent.size();
         if (selectCnt >= sizeCurrent) {
             selectCnt = sizeCurrent;

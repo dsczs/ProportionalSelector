@@ -1,7 +1,5 @@
 package com.github.jaskey.sample;
 
-
-
 import com.github.jaskey.ProportionalSelector;
 import com.github.jaskey.SimpleCandidate;
 
