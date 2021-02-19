@@ -11,10 +11,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  */
 public class ProportionalSelector<T extends ICandidate> {
 
-
-
     private final Set<T> candidateSet = new CopyOnWriteArraySet<>();
-
 
     // 策略设计模式
     // 流量配比策略，默认使用加权随机策略，可自定义扩展其他策略
@@ -65,11 +62,6 @@ public class ProportionalSelector<T extends ICandidate> {
         }
         return selectStrategy.select(candidateSetCurrent,selectCnt);
     }
-
-
-
-
-
 
 
 }

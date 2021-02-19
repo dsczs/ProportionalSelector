@@ -6,6 +6,7 @@ import java.util.Objects;
  * 简单的候选实体，若上游只关心id，可以使用此类。
  */
 public class SimpleCandidate implements ICandidate {
+
     private final int weight;
     private final String id;
 
@@ -43,8 +44,12 @@ public class SimpleCandidate implements ICandidate {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SimpleCandidate that = (SimpleCandidate) o;
         return weight == that.weight &&
                 Objects.equals(id, that.id);

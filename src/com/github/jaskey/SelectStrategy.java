@@ -8,6 +8,7 @@ import java.util.Set;
  * 策略设计模式，用以实际选择候选实体
  */
 public interface SelectStrategy<T> {
+
       T selectOne(Set<T> candidateSet);
 
       /**

@@ -1,15 +1,15 @@
 package com.github.jaskey;
 
-
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * Created by linjunjie1103@gmail.com on 2019/7/10.
  */
 public class WeightRandomStrategy<T extends ICandidate> implements SelectStrategy<T> {
-
-
 
     /**
      * 按照权重挑选一个候选
@@ -55,10 +55,8 @@ public class WeightRandomStrategy<T extends ICandidate> implements SelectStrateg
             }
         }
 
-
         return validCandidateList.get(0);
     }
-
 
 
     @Override
@@ -83,6 +81,5 @@ public class WeightRandomStrategy<T extends ICandidate> implements SelectStrateg
 
         return resList;
     }
-
 
 }
